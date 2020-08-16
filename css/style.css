@@ -10,6 +10,8 @@
 /*text styles*/
 
 body{
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     background: GhostWhite;
@@ -23,17 +25,33 @@ h1{
 h3{
     color: dimgrey;
     background: inherit;
-    margin: 10px;
+    margin: 15px;
 }
 p{
     text-align: left;
+    line-height: 130%;
     font-size: 18px;
-    margin: 10px;
+    margin: 15px;
 }
 .projects, .resume, .about_me, .contact{
     display: none;
     width: 50%;
     background: white;
+    margin-bottom: 30px;
+}
+.copyright{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background: #363636; 
+}
+.copyrightText{
+    color: #828282;
+    font-size: 12px; 
+    line-height: 30px;
 }
 
 /*image styles*/
@@ -44,11 +62,17 @@ p{
     font-size: 0;
     vertical-align: middle;
 }
+.banner1000, .banner600{
+    display: none;
+}
 .bannerOverlay{
     position: absolute;
     top: 4px;
     right: 4px;
     font-size: 16px;   
+}
+.bannerOverlay img{
+    height: 35px;
 }
 .signpost{
     position: sticky;
@@ -59,8 +83,10 @@ p{
     background: #16577A;
 }
 .signpost .border{
+    display: inline-block;
     padding: 8px 0;
-    font-size: 30px;
+    padding-right: 3px;
+    font-size: 26px;
 }
 .signpost img{
     height: 50px;
@@ -96,40 +122,42 @@ p{
 /*responsive styles*/
 
 @media only screen and (max-width: 1000px){
-    .bannerOverlay .clickable > img{
-        height: 25px;   
+    .banner1920{
+        display: none;
     }
-    .bannerOverlay{  
+    .banner1000{
+        display: inline-block;
     }
-    .signpost .clickable > img{
-        height: 30px;
+    .bannerOverlay .clickable:nth-child(1){
+        display: block;
+        margin-bottom: 4px; 
     }
-    .signpost .border{
-      padding: 5px 0;
-      font-size: 20px;
+    .border:nth-child(1){
+        display: block;
+        padding-bottom: 0;
     }
     .projects, .resume, .about_me, .contact{
         width: 75%;
     }  
 }
-@media only screen and (max-width: 600px){
-    .bannerOverlay .clickable > img{
-        height: 10px;   
-    }
-    .bannerOverlay{
-        top: 2px;
-        right: 2px;
-        font-size: 10px;   
+@media only screen and (max-width: 512px){
+    .bannerOverlay img{
+        height: 20px;  
     }
     .signpost .clickable > img{
-        height: 15px;
+        height: 30px;
     }
-    .signpost .border{
-      padding: 3px 0;
-      font-size: 10px;
+    .border:nth-child(1){
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    .border:nth-child(2){
+        padding: 5px 0;
+        padding-right: 3px;
+        font-size: 18px;
     }
     .projects, .resume, .about_me, .contact{
         width: 90%;
-    }    
+    } 
 }
 
