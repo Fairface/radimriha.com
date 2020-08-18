@@ -46,11 +46,11 @@ p{
     height: 30px;
     text-align: center;
     vertical-align: middle;
-    background: #363636; 
+    background: #363636;
 }
 .copyrightText{
     color: #828282;
-    font-size: 12px; 
+    font-size: 12px;
     line-height: 30px;
 }
 
@@ -69,10 +69,10 @@ p{
     position: absolute;
     top: 4px;
     right: 4px;
-    font-size: 16px;   
+    font-size: 16px;
 }
 .bannerOverlay img{
-    height: 35px;
+    height: 40px;
 }
 .signpost{
     position: sticky;
@@ -98,6 +98,7 @@ p{
 .bannerOverlay .clickable{
     display: inline-block;
     font-size: 0;
+    border-radius: 5px;
 }
 .bannerOverlay .clickable:not(.currentButton):hover{
     background: DimGrey;
@@ -109,6 +110,7 @@ p{
     font-size: 0;
     vertical-align: bottom;
     top: 0;
+    border-radius: 15px;
 }
 .signpost .clickable:not(.currentButton):hover{
     background: #0E3448;
@@ -130,7 +132,7 @@ p{
     }
     .bannerOverlay .clickable:nth-child(1){
         display: block;
-        margin-bottom: 4px; 
+        margin-bottom: 4px;
     }
     .border:nth-child(1){
         display: block;
@@ -138,11 +140,11 @@ p{
     }
     .projects, .resume, .about_me, .contact{
         width: 75%;
-    }  
+    }
 }
 @media only screen and (max-width: 512px){
     .bannerOverlay img{
-        height: 20px;  
+        height: 25px;
     }
     .signpost .clickable > img{
         height: 30px;
@@ -158,6 +160,5 @@ p{
     }
     .projects, .resume, .about_me, .contact{
         width: 90%;
-    } 
+    }
 }
-

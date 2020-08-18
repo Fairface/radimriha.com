@@ -4,7 +4,7 @@ const subpages = ["projects", "resume", "about_me", "contact"];
 let currentSubpage = subpages[0];
 let currentLanguage = languages[0];
 let initialized = false;
-let mouseOnPage = false;  
+let mouseOnPage = false;
 
 /*initialize website based on URL hash input*/
 initFromURL();
@@ -25,7 +25,7 @@ window.onhashchange = function(){
 function localize(language){
     if (languages.includes(language)){
         hideSubpage();
-        //hide all unused languages    
+        //hide all unused languages
         document.querySelectorAll("[lang]:not(:lang(" + language + "))").forEach(function (node){
             node.style.display = "none";
         });
@@ -42,7 +42,7 @@ function loadSubpage(subpage){
     if (subpages.includes(subpage)){
         //hide the current subpage
         hideSubpage();
-        //show the new subpage in the current language 
+        //show the new subpage in the current language
         document.querySelector("[lang]:lang(" + currentLanguage + ")" + " ." + subpage).style.display = "inline-block";
         //add activeButton class to the new subpage button
         document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + subpage).classList.add("currentButton");
@@ -53,7 +53,7 @@ function loadSubpage(subpage){
 }
 
 function hideSubpage(){
-    //hide the current subpage in the current language 
+    //hide the current subpage in the current language
     document.querySelector("[lang]:lang(" + currentLanguage + ")" + " ." + currentSubpage).style.display = "none";
     //remove activeButton class from current subpage button
     document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + currentSubpage).classList.remove("currentButton");
@@ -64,7 +64,7 @@ function hideSubpage(){
 function initFromURL(){
     initialized = false;
     /*startup localization*/
-    let localizationParameter = getURLHashParameter(URLHashStructure.indexOf("localization"));    
+    let localizationParameter = getURLHashParameter(URLHashStructure.indexOf("localization"));
     for (lang = 0; lang < languages.length; lang++){
         if (localizationParameter == (languages[lang])){
             localize(languages[lang]);
@@ -79,7 +79,7 @@ function initFromURL(){
         if (subpageParameter == subpages[subP]){
             loadSubpage(subpages[subP]);
             break;
-        }  
+        }
         else if (subP == subpages.length - 1)
             loadSubpage(subpages[0]);
     }
@@ -96,7 +96,7 @@ function getURLHashParameter(parameterIndex){
         if(hashReached)
             hashString += URLread[i];
         if(URLread[i] == "#")
-            hashReached = true;       
+            hashReached = true;
     }
     if(parameterIndex < hashString.split("/").length)
         return hashString.split("/")[parameterIndex];
