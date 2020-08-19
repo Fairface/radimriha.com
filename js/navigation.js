@@ -29,9 +29,9 @@ function localize(language){
       node.style.display = "unset";
     });
     //hide old language button
-    document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + currentLanguage).classList.remove("currentButton");
+    document.querySelector(".B-" + currentLanguage).classList.remove("currentButton");
     //show new language button
-    document.querySelector("[lang]:lang(" + language + ")" + " .B-" + language).classList.add("currentButton");
+    document.querySelector(".B-" + language).classList.add("currentButton");
     currentLanguage = language;
     loadSubpage(currentSubpage);
   }
@@ -44,7 +44,7 @@ function loadSubpage(subpage){
     //show the new subpage in the current language
     document.querySelector("[lang]:lang(" + currentLanguage + ")" + " ." + subpage).style.display = "inline-block";
     //add activeButton class to the new subpage button
-    document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + subpage).classList.add("currentButton");
+    document.querySelector(".B-" + subpage).classList.add("currentButton");
     currentSubpage = subpage;
     if(initialized) URLupdate();
   }
@@ -54,7 +54,7 @@ function hideSubpage(){
   //hide the current subpage in the current language
   document.querySelector("[lang]:lang(" + currentLanguage + ")" + " ." + currentSubpage).style.display = "none";
   //remove activeButton class from current subpage button
-  document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + currentSubpage).classList.remove("currentButton");
+  document.querySelector(".B-" + currentSubpage).classList.remove("currentButton");
 }
 
 /*URL management*/
