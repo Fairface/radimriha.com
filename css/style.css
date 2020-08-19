@@ -37,14 +37,10 @@ p{
   margin-bottom: 30px;
 }
 
-
-
-
 /*banner styles*/
 
 .banner{
   position: relative;
-  display: inline-block;
   font-size: 0;
   vertical-align: middle;
 }
@@ -55,13 +51,34 @@ p{
   position: absolute;
   top: 4px;
   right: 4px;
-  font-size: 16px;
+  font-size: 16px;  /*tweak space between elements*/
 }
 .bannerOverlay img{
+  width: 40px;
   height: 40px;
 }
-
-
+.bannerText{
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bannerOverlay .clickable{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 32px;
+  width: 136px;
+  border: 4px solid rgba(255, 255, 255, .5);
+  border-radius: 5px;
+}
+.bannerOverlay .clickable:not(.currentButton):hover{
+  background: DimGrey;
+  opacity: 1.0;
+  transition: .3s ease;
+}
 
 /*signpost styles*/
 
@@ -102,25 +119,11 @@ p{
   transition: .3s ease;
 }
 
-
-
-
-.bannerOverlay .clickable{
-  display: inline-block;
-  font-size: 0;
-  border-radius: 5px;
-}
-.bannerOverlay .clickable:not(.currentButton):hover{
-  background: DimGrey;
-  opacity: 1.0;
-  transition: .3s ease;
-}
+/*general button styles*/
 
 .clickable:not(.currentButton){
   opacity: 0.3;
 }
-
-
 
 /*copyright notice*/
 
