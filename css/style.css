@@ -10,155 +10,173 @@
 /*text styles*/
 
 body{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    background: GhostWhite;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: GhostWhite;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    color: dimgrey;
-    text-align: center;
+  color: dimgrey;
 }
 h3{
-    color: dimgrey;
-    background: inherit;
-    margin: 15px;
+  color: dimgrey;
+  background: inherit;
+  margin: 15px;
 }
 p{
-    text-align: left;
-    line-height: 130%;
-    font-size: 18px;
-    margin: 15px;
+  text-align: left;
+  line-height: 130%;
+  font-size: 18px;
+  margin: 15px;
 }
 .projects, .resume, .about_me, .contact{
-    display: none;
-    width: 50%;
-    background: white;
-    margin-bottom: 30px;
-}
-.copyright{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    text-align: center;
-    vertical-align: middle;
-    background: #363636;
-}
-.copyrightText{
-    color: #828282;
-    font-size: 12px;
-    line-height: 30px;
+  display: none;
+  width: 50%;
+  background: white;
+  margin-bottom: 30px;
 }
 
-/*image styles*/
+
+
+
+/*banner styles*/
 
 .banner{
-    position: relative;
-    display: inline-block;
-    font-size: 0;
-    vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
 }
 .banner1000, .banner600{
-    display: none;
+  display: none;
 }
 .bannerOverlay{
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    font-size: 16px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 16px;
 }
 .bannerOverlay img{
-    height: 40px;
+  height: 40px;
 }
+
+
+
+/*signpost styles*/
+
 .signpost{
-    position: sticky;
-    top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background: #16577A;
+  position: sticky;
+  top: 0;
+  background: #16577A;
 }
 .signpost .border{
-    display: inline-block;
-    padding: 8px 0;
-    padding-right: 3px;
-    font-size: 26px;
+  padding: 8px 0;
+  padding-right: 3px;
+  font-size: 26px;  /*tweak space between elements*/
 }
 .signpost img{
-    height: 50px;
-    vertical-align: middle;
+  width: 50px;
+  height: 50px;
 }
-
-/*button styles*/
-
-.bannerOverlay .clickable{
-    display: inline-block;
-    font-size: 0;
-    border-radius: 5px;
-}
-.bannerOverlay .clickable:not(.currentButton):hover{
-    background: DimGrey;
-    opacity: 1.0;
-    transition: .3s ease;
+.signpostText{
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }
 .signpost .clickable{
-    display: inline-block;
-    font-size: 0;
-    vertical-align: bottom;
-    top: 0;
-    border-radius: 15px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 42px;
+  width: 210px;
+  border: 4px solid rgba(255, 255, 255, .75);
+  border-radius: 10px;
 }
 .signpost .clickable:not(.currentButton):hover{
-    background: #0E3448;
-    opacity: 1.0;
-    transition: .3s ease;
+  background: #0E3448;
+  opacity: 1.0;
+  transition: .3s ease;
 }
+
+
+
+
+.bannerOverlay .clickable{
+  display: inline-block;
+  font-size: 0;
+  border-radius: 5px;
+}
+.bannerOverlay .clickable:not(.currentButton):hover{
+  background: DimGrey;
+  opacity: 1.0;
+  transition: .3s ease;
+}
+
 .clickable:not(.currentButton){
-    opacity: 0.3;
+  opacity: 0.3;
+}
+
+
+
+/*copyright notice*/
+
+.copyright{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  background: #363636;
+}
+.copyrightText{
+  color: #828282;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 /*responsive styles*/
 
 @media only screen and (max-width: 1000px){
-    .banner1920{
-        display: none;
-    }
-    .banner1000{
-        display: inline-block;
-    }
-    .bannerOverlay .clickable:nth-child(1){
-        display: block;
-        margin-bottom: 4px;
-    }
-    .border:nth-child(1){
-        display: block;
-        padding-bottom: 0;
-    }
-    .projects, .resume, .about_me, .contact{
-        width: 75%;
-    }
+  .banner1920{
+    display: none;
+  }
+  .banner1000{
+    display: inline-block;
+  }
+  .bannerOverlay .clickable:nth-child(1){
+    display: block;
+    margin-bottom: 4px;
+  }
+  .border:nth-child(1){
+    display: block;
+    padding-bottom: 0;
+  }
+  .projects, .resume, .about_me, .contact{
+    width: 75%;
+  }
 }
 @media only screen and (max-width: 512px){
-    .bannerOverlay img{
-        height: 25px;
-    }
-    .signpost .clickable > img{
-        height: 30px;
-    }
-    .border:nth-child(1){
-        padding-top: 5px;
-        font-size: 18px;
-    }
-    .border:nth-child(2){
-        padding: 5px 0;
-        padding-right: 3px;
-        font-size: 18px;
-    }
-    .projects, .resume, .about_me, .contact{
-        width: 90%;
-    }
+  .bannerOverlay img{
+    height: 25px;
+  }
+  .signpost .clickable > img{
+    height: 30px;
+  }
+  .border:nth-child(1){
+    padding-top: 5px;
+    font-size: 18px;
+  }
+  .border:nth-child(2){
+    padding: 5px 0;
+    padding-right: 3px;
+    font-size: 18px;
+  }
+  .projects, .resume, .about_me, .contact{
+    width: 90%;
+  }
 }

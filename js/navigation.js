@@ -9,15 +9,10 @@ let mouseOnPage = false;
 /*initialize website based on URL hash input*/
 initFromURL();
 /*detect when the back or forward button was pressed so we can reload from URL hash*/
-document.onmouseover = function(){
-    mouseOnPage = true;
-}
-document.onmouseleave = function(){
-    mouseOnPage = false;
-}
+document.onmouseover = function(){ mouseOnPage = true; }
+document.onmouseleave = function(){ mouseOnPage = false; }
 window.onhashchange = function(){
-    if(!mouseOnPage)
-        initFromURL();
+    if(!mouseOnPage) initFromURL();
 }
 
 /*graphical navigation functions*/
@@ -33,6 +28,10 @@ function localize(language){
         document.querySelectorAll("[lang]:lang(" + language + ")").forEach(function (node){
             node.style.display = "unset";
         });
+        //hide old language button
+        document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + currentLanguage).classList.remove("currentButton");
+        //show new language button
+        document.querySelector("[lang]:lang(" + language + ")" + " .B-" + language).classList.add("currentButton");
         currentLanguage = language;
         loadSubpage(currentSubpage);
     }
@@ -47,8 +46,7 @@ function loadSubpage(subpage){
         //add activeButton class to the new subpage button
         document.querySelector("[lang]:lang(" + currentLanguage + ")" + " .B-" + subpage).classList.add("currentButton");
         currentSubpage = subpage;
-        if(initialized)
-            URLupdate();
+        if(initialized) URLupdate();
     }
 }
 
@@ -70,8 +68,7 @@ function initFromURL(){
             localize(languages[lang]);
             break;
         }
-        else if (lang == languages.length - 1)
-            localize(languages[0]);
+        else if (lang == languages.length - 1) localize(languages[0]);
     }
     /*startup subpage load*/
     let subpageParameter = getURLHashParameter(URLHashStructure.indexOf("subpage"));
@@ -80,8 +77,7 @@ function initFromURL(){
             loadSubpage(subpages[subP]);
             break;
         }
-        else if (subP == subpages.length - 1)
-            loadSubpage(subpages[0]);
+        else if (subP == subpages.length - 1) loadSubpage(subpages[0]);
     }
     /*initialize url hash with the current parameters*/
     URLInit();
