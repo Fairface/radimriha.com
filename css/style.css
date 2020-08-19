@@ -44,19 +44,23 @@ p{
   font-size: 0;
   vertical-align: middle;
 }
-.bannerText{
+.bannerTextContainer{
   position: absolute;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+.bannerText{
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   cursor: default;
+  margin-right: .25em;
 }
-.banner1000, .banner600{
+.banner1100{
   display: none;
 }
 .banner .buttonContainer{
@@ -65,7 +69,10 @@ p{
   right: 4px;
   font-size: 16px;  /*tweak space between elements*/
 }
-.banner .buttonContainer img{
+.banner .button{
+  display: inline-block;
+}
+.banner .clickable img{
   width: 40px;
   height: 40px;
 }
@@ -76,7 +83,7 @@ p{
   font-weight: bold;
   cursor: default;
 }
-.banner .buttonContainer .clickable{
+.banner .clickable{
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -87,7 +94,7 @@ p{
   border: 4px solid rgba(255, 255, 255, .5);
   border-radius: 5px;
 }
-.banner .buttonContainer .clickable:not(.currentButton):hover{
+.banner .clickable:not(.currentButton):hover{
   background: DimGrey;
   opacity: 1.0;
   transition: .3s ease;
@@ -158,42 +165,75 @@ p{
 
 /*responsive styles*/
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1100px){
   .banner1920{
     display: none;
   }
-  .banner1000{
-    display: inline-block;
+  .banner1100{
+    display: unset;
   }
-  .bannerOverlay .clickable:nth-child(1){
+  .bannerTextContainer{
+    flex-direction: column;
+  }
+  .bannerText{
+    margin-right: 0;
+  }
+  .bannerText:nth-child(1){
+    margin-bottom: 6px;
+  }
+  .banner .button:nth-child(1){
     display: block;
     margin-bottom: 4px;
-  }
-  .border:nth-child(1){
-    display: block;
-    padding-bottom: 0;
   }
   .projects, .resume, .about_me, .contact{
     width: 75%;
   }
 }
-@media only screen and (max-width: 512px){
-  .bannerOverlay img{
-    height: 25px;
+@media only screen and (max-width: 800px){
+  .bannerText{
+    font-size: 30px;
   }
-  .signpost .clickable > img{
-    height: 30px;
+  .bannerText{
+    margin-right: 0;
   }
-  .border:nth-child(1){
-    padding-top: 5px;
-    font-size: 18px;
+  .bannerText:nth-child(1){
+    margin-bottom: 4px;
   }
-  .border:nth-child(2){
-    padding: 5px 0;
-    padding-right: 3px;
-    font-size: 18px;
+}
+@media only screen and (max-width: 550px){
+  .bannerText{
+    font-size: 20px;
+  }
+  .banner .clickable{
+    height: 24px;
+    width: 102px;
+    border: 3px solid rgba(255, 255, 255, .5);
+    border-radius: 5px;
+  }
+  .bannerButtonText{
+    font-size: 15px;
   }
   .projects, .resume, .about_me, .contact{
     width: 90%;
+  }
+}
+@media only screen and (max-width: 420px){
+  .bannerText{
+    font-size: 15px;
+  }
+  .bannerText{
+    margin-right: 0;
+  }
+  .bannerText:nth-child(1){
+    margin-bottom: 2px;
+  }
+  .banner .clickable{
+    height: 16px;
+    width: 68px;
+    border: 3px solid rgba(255, 255, 255, .5);
+    border-radius: 5px;
+  }
+  .bannerButtonText{
+    font-size: 10px;
   }
 }

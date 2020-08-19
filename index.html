@@ -13,18 +13,22 @@
   <body>
     <!--Universal content-->
     <div class="banner">
-      <div lang="en"><div class="bannerText">Radim Říha Electronics</div></div>
-      <div lang="cz"><div class="bannerText">Elektronika Radim Říha</div></div>
+      <div lang="en"><div class="bannerTextContainer"><div class="bannerText">Radim Říha</div><div class="bannerText">Electronics</div></div></div>
+      <div lang="cz"><div class="bannerTextContainer"><div class="bannerText">Elektronika</div><div class="bannerText">Radim Říha</div></div></div>
       <img class="banner1920" src="images/lang-universal/banner_1920.png" alt="Image not available" width="100%">
-      <img class="banner1000" src="images/lang-universal/banner_1000.png" alt="Image not available" width="100%">
+      <img class="banner1100" src="images/lang-universal/banner_1100.png" alt="Image not available" width="100%">
       <div class="buttonContainer">
-        <div class="clickable B-en" onclick="localize('en')">
-          <!--<img src="images/lang-universal/buttons/english.png" alt="Image not available">-->
-          <div class="bannerButtonText">english</div>
+        <div class="button">
+          <div class="clickable B-en" onclick="localize('en')">
+            <!--<img src="images/lang-universal/buttons/english.png" alt="Image not available">-->
+            <div class="bannerButtonText">english</div>
+          </div>
         </div>
-        <div class="clickable B-cz" onclick="localize('cz')">
-          <!--<img src="images/lang-universal/buttons/czech.png" alt="Image not available">-->
-          <div class="bannerButtonText">česky</div>
+        <div class="button">
+          <div class="clickable B-cz" onclick="localize('cz')">
+            <!--<img src="images/lang-universal/buttons/czech.png" alt="Image not available">-->
+            <div class="bannerButtonText">česky</div>
+          </div>
         </div>
       </div>
     </div>
@@ -109,6 +113,8 @@
       <div class="copyrightText">© 2020-<script>document.write(new Date().getFullYear())</script> Radim Říha</div>
     </div>
 
+
+    <!--run javascript scripts-->
     <script src="js/navigation.js"></script>
   </body>
 </html>
