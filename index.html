@@ -10,7 +10,7 @@
     <link rel="icon" href="images/favicon/favicon.ico">
   </head>
 
-  <body>
+  <body onresize="checkWidth()">
     <!--Universal content-->
     <div class="banner">
       <div lang="en"><div class="bannerTextContainer"><div class="bannerText">Radim Říha</div><div class="bannerText">Electronics</div></div></div>
@@ -33,31 +33,41 @@
       </div>
     </div>
 
-    <nav class="signpost">
-      <div class="buttonContainer">
-        <div class="clickable B-projects" onclick="loadSubpage('projects')">
-          <img src="images/lang-universal/icons/lightbulb.svg">
-          <div lang="en"><div class="signpostButtonText">projects</div></div>
-          <div lang="cz"><div class="signpostButtonText">projekty</div></div>
+    <nav class="signpostContainer">
+      <div class="dropdown" onclick="toggleDropdown()">
+        ---
+      </div>
+      <div class="signpost" style="display: none;">
+        <div class="buttonContainer">
+          <div class="clickable B-projects" onclick="loadSubpage('projects')">
+            <img src="images/lang-universal/icons/lightbulb.svg">
+            <div lang="en"><div class="signpostButtonText">projects</div></div>
+            <div lang="cz"><div class="signpostButtonText">projekty</div></div>
+          </div>
         </div>
-        <div class="clickable B-resume" onclick="loadSubpage('resume')">
-          <img src="images/lang-universal/icons/form.svg">
-          <div lang="en"><div class="signpostButtonText">resume</div></div>
-          <div lang="cz"><div class="signpostButtonText">životopis</div></div>
+        <div class="buttonContainer">
+          <div class="clickable B-resume" onclick="loadSubpage('resume')">
+            <img src="images/lang-universal/icons/form.svg">
+            <div lang="en"><div class="signpostButtonText">resume</div></div>
+            <div lang="cz"><div class="signpostButtonText">životopis</div></div>
+          </div>
         </div>
-        <div class="clickable B-about_me" onclick="loadSubpage('about_me')">
-          <img src="images/lang-universal/icons/form.svg">
-          <div lang="en"><div class="signpostButtonText">about me</div></div>
-          <div lang="cz"><div class="signpostButtonText">o mně</div></div>
+        <div class="buttonContainer">
+          <div class="clickable B-about_me" onclick="loadSubpage('about_me')">
+            <img src="images/lang-universal/icons/form.svg">
+            <div lang="en"><div class="signpostButtonText">about me</div></div>
+            <div lang="cz"><div class="signpostButtonText">o mně</div></div>
+          </div>
         </div>
-        <div class="clickable B-contact" onclick="loadSubpage('contact')">
-          <img src="images/lang-universal/icons/mail.svg">
-          <div lang="en"><div class="signpostButtonText">contact</div></div>
-          <div lang="cz"><div class="signpostButtonText">kontakt</div></div>
+        <div class="buttonContainer">
+          <div class="clickable B-contact" onclick="loadSubpage('contact')">
+            <img src="images/lang-universal/icons/mail.svg">
+            <div lang="en"><div class="signpostButtonText">contact</div></div>
+            <div lang="cz"><div class="signpostButtonText">kontakt</div></div>
+          </div>
         </div>
       </div>
     </nav>
-
 
     <!--English localization-->
     <div lang="en">

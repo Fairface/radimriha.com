@@ -101,14 +101,20 @@ p{
 
 /*signpost styles*/
 
-.signpost{
+.signpostContainer{
   position: sticky;
   top: 0;
   background: #16577A;
+  height: 66px;
+  width: 100%;
+}
+.signpost{
+  flex-direction: row;
+  background: #16577A;
 }
 .signpost .buttonContainer{
-  padding: 8px 0;
-  padding-right: 3px;
+  display: inline-block;
+  padding: 8px 4px;
   font-size: 26px;  /*tweak space between elements*/
 }
 .signpostButtonText{
@@ -137,6 +143,17 @@ p{
   opacity: 1.0;
   transition: .3s ease;
 }
+.dropdown{
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  color: white;
+}
+.dropdown:hover{
+  background-color: #0E3448;
+  transition: .3s ease;
+}
 
 /*general button styles*/
 
@@ -163,6 +180,12 @@ p{
 
 /*responsive styles*/
 
+@media only screen and (min-width: 1101px){
+  /*force signpost display if the screen expands from dropdown style*/
+  .signpost{
+    display: inline-flex !important;
+  }
+}
 @media only screen and (max-width: 1100px){
   .banner1920{
     display: none;
@@ -185,6 +208,27 @@ p{
   }
   .projects, .resume, .about_me, .contact{
     width: 75%;
+  }
+  /*change signpost to dropdown*/
+  .signpost{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 66px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 0 0 10px;
+  }
+  .signpost .buttonContainer{
+    padding: 8px;
+    padding-top: 0;
+  }
+  .signpost .buttonContainer:nth-child(1){
+    padding-top: 8px;
+  }
+  .dropdown{
+    display: inline-block;
   }
 }
 @media only screen and (max-width: 800px){

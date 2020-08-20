@@ -57,6 +57,11 @@ function hideSubpage(){
   document.querySelector(".B-" + currentSubpage).classList.remove("currentButton");
 }
 
+function toggleDropdown(){
+  if(document.querySelector(".signpost").style.display === "none") document.querySelector(".signpost").style.display = "inline-flex";
+  else document.querySelector(".signpost").style.display = "none";
+}
+
 /*URL management*/
 
 function initFromURL(){
