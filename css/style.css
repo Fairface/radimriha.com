@@ -4,7 +4,7 @@
   display: none;
 }
 [lang=en] {
-  display: unset;
+  display: block;
 }
 
 /*various styles*/
@@ -84,7 +84,7 @@ p{
   display: inline-block;
 }
 .bannerButtonText{
-  width: 55%;
+  width: 60%;
   display: inline-block;
   color: white;
   font-size: 20px;
@@ -93,7 +93,7 @@ p{
 }
 .bannerButtonImage{
   height: 20px;
-  width: 35%;
+  width: 40%;
 }
 .banner .clickable img{
   vertical-align: top;
@@ -102,7 +102,6 @@ p{
 .banner .clickable{
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   vertical-align: middle;
   height: 32px;
@@ -129,6 +128,7 @@ p{
 }
 .signpost{
   flex-direction: row;
+  align-items: center;
   background: #16577A;
 }
 .signpost .buttonContainer{
@@ -137,7 +137,7 @@ p{
   font-size: 26px;  /*tweak space between elements*/
 }
 .signpostButtonText{
-  width: 65%;
+  width: 70%;
   display: inline-block;
   color: white;
   font-size: 25px;
@@ -146,7 +146,7 @@ p{
 }
 .signpostButtonImage{
   height: 30px;
-  width: 25%;
+  width: 30%;
 }
 .signpost .clickable img{
   vertical-align: top;
@@ -155,7 +155,6 @@ p{
 .signpost .clickable{
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   vertical-align: middle;
   height: 42px;
@@ -218,7 +217,7 @@ p{
     display: none;
   }
   .banner1100{
-    display: unset;
+    display: block;
   }
   .bannerTextContainer{
     flex-direction: column;
@@ -243,8 +242,6 @@ p{
     right: 0;
     top: 66px;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     border-radius: 0 0 0 10px;
     border-top: 3px dashed rgba(255, 255, 255, .5);
   }

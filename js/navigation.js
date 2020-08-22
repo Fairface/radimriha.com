@@ -1,6 +1,6 @@
-const URLHashStructure = ["localization", "subpage"];
-const languages = ["en", "cz"];
-const subpages = ["projects", "resume", "about_me", "contact"];
+let URLHashStructure = ["localization", "subpage"];
+let languages = ["en", "cz"];
+let subpages = ["projects", "resume", "about_me", "contact"];
 let currentSubpage = subpages[0];
 let currentLanguage = languages[0];
 let initialized = false;
@@ -18,16 +18,14 @@ window.onhashchange = function(){
 /*graphical navigation functions*/
 
 function localize(language){
-  if (languages.includes(language)){
+  if (languages.indexOf(language) != -1){
     hideSubpage();
     //hide all unused languages
-    document.querySelectorAll("[lang]:not(:lang(" + language + "))").forEach(function (node){
-      node.style.display = "none";
-    });
+    let elements = document.querySelectorAll("[lang]:not(:lang(" + language + "))");
+    for (var i = 0; i < elements.length; i++) elements[i].style.display = "none";
     //show the new language
-    document.querySelectorAll("[lang]:lang(" + language + ")").forEach(function (node){
-      node.style.display = "unset";
-    });
+    elements = document.querySelectorAll("[lang]:lang(" + language + ")");
+    for (var i = 0; i < elements.length; i++) elements[i].style.display = "inline";
     //hide old language button
     document.querySelector(".B-" + currentLanguage).classList.remove("currentButton");
     //show new language button
@@ -38,7 +36,7 @@ function localize(language){
 }
 
 function loadSubpage(subpage){
-  if (subpages.includes(subpage)){
+  if (subpages.indexOf(subpage) != -1){
     //hide dropdown menu
     document.querySelector(".signpost").style.display = "none";
     //hide the current subpage
@@ -70,11 +68,11 @@ function initFromURL(){
   initialized = false;
   //startup localization
   let localizationParameter = getURLHashParameter(URLHashStructure.indexOf("localization"));
-  if(languages.includes(localizationParameter)) localize(localizationParameter);
+  if(languages.indexOf(localizationParameter) != -1) localize(localizationParameter);
   else localize(languages[0]);
   //startup subpage load
   let subpageParameter = getURLHashParameter(URLHashStructure.indexOf("subpage"));
-  if(subpages.includes(subpageParameter)) loadSubpage(subpageParameter);
+  if(subpages.indexOf(subpageParameter) != -1) loadSubpage(subpageParameter);
   else loadSubpage(subpages[0]);
   //initialize url hash with the current parameters
   URLInit();
@@ -85,7 +83,7 @@ function getURLHashParameter(parameterIndex){
   let URLread = window.location.href;
   let hashString = "";
   //check if hash is present
-  if(!URLread.includes("#")) return "";
+  if(URLread.indexOf("#") == -1) return "";
   //extract parameter if available
   hashString = URLread.substring(URLread.indexOf("#") + 1);
   if(parameterIndex < hashString.split("/").length)
@@ -96,7 +94,7 @@ function getURLHashParameter(parameterIndex){
 function getBaseURL(){
   baseURL = window.location.href;
   //get base URL without index.html, if present
-  if (baseURL.includes("index.html"))
+  if (baseURL.indexOf("index.html") != -1)
     baseURL = baseURL.substring(0, baseURL.indexOf("index.html") + 10);
   else{
     baseURL = baseURL.substring(0, baseURL.indexOf(".com") + 4);
