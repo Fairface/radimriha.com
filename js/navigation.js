@@ -39,6 +39,8 @@ function localize(language){
 
 function loadSubpage(subpage){
   if (subpages.includes(subpage)){
+    //hide dropdown menu
+    document.querySelector(".signpost").style.display = "none";
     //hide the current subpage
     hideSubpage();
     //show the new subpage in the current language
