@@ -1,16 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600">
-<clipPath id="s">
-	<path d="M0,0 v30 h60 v-30 z"/>
-</clipPath>
-<clipPath id="t">
-	<path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-</clipPath>
-<g clip-path="url(#s)">
-	<path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-	<path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-	<path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
-	<path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-	<path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="UK_flag.svg"
+   id="svg20"
+   version="1.1"
+   height="300"
+   width="600"
+   viewBox="0 0 60 30">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     viewbox-width="120"
+     inkscape:current-layer="g18"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="354.44724"
+     inkscape:cx="638.86651"
+     inkscape:zoom="0.69296465"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     scale-x="0.1"
+     showgrid="false"
+     id="namedview22"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <clipPath
+     id="s">
+    <path
+       id="path2"
+       d="M 0,0 V 30 H 60 V 0 Z" />
+  </clipPath>
+  <clipPath
+     id="t">
+    <path
+       id="path5"
+       d="m 30,15 h 30 v 15 z m 0,0 V 30 H 0 Z m 0,0 H 0 V 0 Z m 0,0 V 0 h 30 z" />
+  </clipPath>
+  <g
+     id="g18"
+     clip-path="url(#s)">
+    <path
+       id="path8"
+       fill="#012169"
+       d="M 0,0 V 30 H 60 V 0 Z" />
+    <path
+       id="path10"
+       stroke-width="6"
+       stroke="#ffffff"
+       d="M 0,0 60,30 M 60,0 0,30" />
+    <path
+       id="path12"
+       stroke-width="4"
+       stroke="#c8102e"
+       clip-path="url(#t)"
+       d="M 0,0 60,30 M 60,0 0,30" />
+    <path
+       id="path14"
+       stroke-width="10"
+       stroke="#ffffff"
+       d="M 30,0 V 30 M 0,15 h 60" />
+    <path
+       id="path16"
+       stroke-width="6"
+       stroke="#c8102e"
+       d="M 30,0 V 30 M 0,15 h 60" />
+  </g>
 </svg>

@@ -1,6 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="900" height="600">
-	<rect width="900" height="600" fill="#d7141a"/>
-	<rect width="900" height="300" fill="#fff"/>
-	<path d="M 450,300 0,0 V 600 z" fill="#11457e"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="900"
+   height="600"
+   id="svg8"
+   sodipodi:docname="CZ_flag.svg"
+   viewBox="0 0 90 60"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     scale-x="0.1"
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview10"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.92395285"
+     inkscape:cx="482.68432"
+     inkscape:cy="291.35867"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <rect
+     style="stroke-width:0.0999998"
+     width="90"
+     height="60"
+     fill="#d7141a"
+     id="rect2"
+     x="0"
+     y="0" />
+  <rect
+     style="stroke-width:0.0999998"
+     width="90"
+     height="30"
+     fill="#ffffff"
+     id="rect4"
+     x="0"
+     y="0" />
+  <path
+     style="stroke-width:0.0999998"
+     d="M 45.00001,30 0,0 v 60 z"
+     fill="#11457e"
+     id="path6" />
 </svg>

@@ -84,7 +84,7 @@ p{
   display: inline-block;
 }
 .bannerButtonText{
-  width: 60%;
+  width: 50%;
   display: inline-block;
   color: white;
   font-size: 20px;
@@ -137,7 +137,7 @@ p{
   font-size: 26px;  /*tweak space between elements*/
 }
 .signpostButtonText{
-  width: 70%;
+  width: 60%;
   display: inline-block;
   color: white;
   font-size: 25px;
