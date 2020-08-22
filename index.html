@@ -12,7 +12,7 @@
 
   <body>
     <!--Universal content-->
-    <div class="banner">
+    <div class="banner noselect">
       <div lang="en"><div class="bannerTextContainer"><div class="bannerText">Radim Říha</div><div class="bannerText">Electronics</div></div></div>
       <div lang="cz"><div class="bannerTextContainer"><div class="bannerText">Elektronika</div><div class="bannerText">Radim Říha</div></div></div>
       <img class="banner1920" src="images/lang-universal/banner_1920.png" alt="Banner" width="100%">
@@ -20,48 +20,48 @@
       <div class="buttonContainer">
         <div class="button">
           <div class="clickable B-en" onclick="localize('en')">
-            <img src="images/lang-universal/icons/UK_flag.svg">
+            <div class="bannerButtonImage"><img src="images/lang-universal/icons/UK_flag.svg"></div>
             <div class="bannerButtonText">english</div>
           </div>
         </div>
         <div class="button">
           <div class="clickable B-cz" onclick="localize('cz')">
-            <img src="images/lang-universal/icons/CZ_flag.svg">
+            <div class="bannerButtonImage"><img src="images/lang-universal/icons/CZ_flag.svg"></div>
             <div class="bannerButtonText">česky</div>
           </div>
         </div>
       </div>
     </div>
 
-    <nav class="signpostContainer">
+    <nav class="signpostContainer noselect">
       <div class="dropdownButton" onclick="toggleDropdown()">
         <img src="images/lang-universal/icons/dropdown.svg">
       </div>
       <div class="signpost" style="display: none;">
         <div class="buttonContainer">
           <div class="clickable B-projects" onclick="loadSubpage('projects')">
-            <img src="images/lang-universal/icons/lightbulb.svg">
+            <div class="signpostButtonImage"><img src="images/lang-universal/icons/lightbulb.svg"></div>
             <div lang="en" class="signpostButtonText"><div>projects</div></div>
             <div lang="cz" class="signpostButtonText"><div>projekty</div></div>
           </div>
         </div>
         <div class="buttonContainer">
           <div class="clickable B-resume" onclick="loadSubpage('resume')">
-            <img src="images/lang-universal/icons/form.svg">
+            <div class="signpostButtonImage"><img src="images/lang-universal/icons/form.svg"></div>
             <div lang="en" class="signpostButtonText"><div>resume</div></div>
             <div lang="cz" class="signpostButtonText"><div>životopis</div></div>
           </div>
         </div>
         <div class="buttonContainer">
           <div class="clickable B-about_me" onclick="loadSubpage('about_me')">
-            <img src="images/lang-universal/icons/form.svg">
+            <div class="signpostButtonImage"><img src="images/lang-universal/icons/form.svg"></div>
             <div lang="en" class="signpostButtonText"><div>about me</div></div>
             <div lang="cz" class="signpostButtonText"><div>o mně</div></div>
           </div>
         </div>
         <div class="buttonContainer">
           <div class="clickable B-contact" onclick="loadSubpage('contact')">
-            <img src="images/lang-universal/icons/mail.svg">
+            <div class="signpostButtonImage"><img src="images/lang-universal/icons/mail.svg"></div>
             <div lang="en" class="signpostButtonText"><div>contact</div></div>
             <div lang="cz" class="signpostButtonText"><div>kontakt</div></div>
           </div>
@@ -120,7 +120,7 @@
 
 
     <!--Universal content-->
-    <div class="copyright">
+    <div class="copyright noselect">
       <div class="copyrightText">© 2020-<script>document.write(new Date().getFullYear())</script> Radim Říha</div>
     </div>
 

@@ -7,6 +7,17 @@
   display: unset;
 }
 
+/*various styles*/
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, supported by Chrome, Edge, Opera and Firefox */
+}
+
 /*text styles*/
 
 body{
@@ -73,25 +84,32 @@ p{
   display: inline-block;
 }
 .bannerButtonText{
+  width: 55%;
   display: inline-block;
   color: white;
   font-size: 20px;
   font-weight: bold;
   cursor: default;
 }
+.bannerButtonImage{
+  height: 20px;
+  width: 35%;
+}
+.banner .clickable img{
+  vertical-align: top;
+  height: inherit;
+}
 .banner .clickable{
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   vertical-align: middle;
   height: 32px;
   width: 136px;
-  border: 4px solid rgba(255, 255, 255, .5);
+  border: 4px solid rgba(255, 255, 255, .6);
+  background: black;
   border-radius: 5px;
-}
-.banner .clickable img{
-  height: 20px;
 }
 .banner .clickable:not(.currentButton):hover{
   border-style: outset;
@@ -119,11 +137,20 @@ p{
   font-size: 26px;  /*tweak space between elements*/
 }
 .signpostButtonText{
+  width: 65%;
   display: inline-block;
   color: white;
   font-size: 25px;
   font-weight: bold;
   cursor: default;
+}
+.signpostButtonImage{
+  height: 30px;
+  width: 25%;
+}
+.signpost .clickable img{
+  vertical-align: top;
+  height: inherit;
 }
 .signpost .clickable{
   display: inline-flex;
@@ -136,9 +163,6 @@ p{
   border: 4px solid rgba(255, 255, 255, .75);
   border-radius: 10px;
 }
-.signpost img{
-  height: 30px;
-}
 .signpost .clickable:not(.currentButton):hover{
   border-style: outset;
   background: #0E3448;
@@ -149,15 +173,10 @@ p{
   display: none;
   position: absolute;
   right: 0;
-  height: 60px;
-  width: 60px;
-  border: 3px outset transparent;
+  height: 100%;
+  width: 66px;
   color: white;
   background-color: #0E3448;
-}
-.dropdownButton:hover{
-  border-color: rgba(255, 255, 255, 0.75);
-  transition: .3s ease;
 }
 .dropdownButton img{
   height: 30px;
@@ -175,15 +194,15 @@ p{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 30px;
+  height: 20px;
   text-align: center;
   vertical-align: middle;
   background: #363636;
 }
 .copyrightText{
   color: #828282;
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 10px;
+  line-height: 20px;
 }
 
 /*responsive styles*/
@@ -265,12 +284,34 @@ p{
   .bannerButtonText{
     font-size: 15px;
   }
-  .banner .clickable img{
+  .bannerButtonImage{
     height: 15px;
   }
   .projects, .resume, .about_me, .contact{
     width: 90%;
   }
+}
+@media only screen and (max-width: 420px){
+  .bannerText{
+    font-size: 18px;
+  }
+  .banner .clickable{
+    height: 16px;
+    width: 68px;
+    border-width: 2px;
+  }
+  .bannerButtonText{
+    font-size: 10px;
+  }
+  .bannerButtonImage{
+    height: 10px;
+  }
+}
+
+/*styles for mobile landscape view*/
+
+/*make signpost smaller if it's in dropdown mode and height < 550px or if width < 550px*/
+@media only screen and (max-height: 550px) and (max-width: 1100px), only screen and (max-width: 550px){
   .signpostContainer{
     height: 44px;
   }
@@ -281,13 +322,13 @@ p{
   .signpostButtonText{
     font-size: 16px;
   }
+  .signpostButtonImage{
+    height: 20px;
+  }
   .signpost .clickable{
     height: 28px;
     width: 140px;
     border-width: 3px;
-  }
-  .signpost img{
-    height: 20px;
   }
   .signpost .buttonContainer{
     padding: 5px;
@@ -297,27 +338,10 @@ p{
     padding-top: 5px;
   }
   .dropdownButton{
-    height: 38px;
-    width: 38px;
+    height: 100%;
+    width: 44px;
   }
   .dropdownButton img{
     height: 20px;
-  }
-}
-@media only screen and (max-width: 420px){
-  .bannerText{
-    font-size: 18px;
-  }
-  .banner .clickable{
-    height: 16px;
-    width: 68px;
-    border: 3px solid rgba(255, 255, 255, .5);
-    border-radius: 5px;
-  }
-  .bannerButtonText{
-    font-size: 10px;
-  }
-  .banner .clickable img{
-    height: 10px;
   }
 }
