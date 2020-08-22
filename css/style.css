@@ -72,10 +72,6 @@ p{
 .banner .button{
   display: inline-block;
 }
-.banner .clickable img{
-  width: 40px;
-  height: 40px;
-}
 .bannerButtonText{
   display: inline-block;
   color: white;
@@ -86,7 +82,7 @@ p{
 .banner .clickable{
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   vertical-align: middle;
   height: 32px;
@@ -94,7 +90,11 @@ p{
   border: 4px solid rgba(255, 255, 255, .5);
   border-radius: 5px;
 }
+.banner .clickable img{
+  height: 20px;
+}
 .banner .clickable:not(.currentButton):hover{
+  border-style: outset;
   background: DimGrey;
   opacity: 1.0;
   transition: .3s ease;
@@ -102,19 +102,21 @@ p{
 
 /*signpost styles*/
 
-.signpost{
+.signpostContainer{
   position: sticky;
   top: 0;
   background: #16577A;
+  height: 66px;
+  width: 100%;
+}
+.signpost{
+  flex-direction: row;
+  background: #16577A;
 }
 .signpost .buttonContainer{
-  padding: 8px 0;
-  padding-right: 3px;
+  display: inline-block;
+  padding: 8px 4px;
   font-size: 26px;  /*tweak space between elements*/
-}
-.signpost img{
-  width: 50px;
-  height: 50px;
 }
 .signpostButtonText{
   display: inline-block;
@@ -126,7 +128,7 @@ p{
 .signpost .clickable{
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   vertical-align: middle;
   height: 42px;
@@ -134,10 +136,31 @@ p{
   border: 4px solid rgba(255, 255, 255, .75);
   border-radius: 10px;
 }
+.signpost img{
+  height: 30px;
+}
 .signpost .clickable:not(.currentButton):hover{
+  border-style: outset;
   background: #0E3448;
   opacity: 1.0;
   transition: .3s ease;
+}
+.dropdownButton{
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  border: 3px outset transparent;
+  color: white;
+  background-color: #0E3448;
+}
+.dropdownButton:hover{
+  border-color: rgba(255, 255, 255, 0.75);
+  transition: .3s ease;
+}
+.dropdownButton img{
+  height: 30px;
 }
 
 /*general button styles*/
@@ -165,6 +188,12 @@ p{
 
 /*responsive styles*/
 
+@media only screen and (min-width: 1101px){
+  /*force signpost display if the screen expands from dropdown style*/
+  .signpost{
+    display: inline-flex !important;
+  }
+}
 @media only screen and (max-width: 1100px){
   .banner1920{
     display: none;
@@ -188,44 +217,96 @@ p{
   .projects, .resume, .about_me, .contact{
     width: 75%;
   }
+  /*change signpost to dropdown*/
+  .signpost{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 66px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 0 0 10px;
+    border-top: 3px dashed rgba(255, 255, 255, .5);
+  }
+  .signpost .buttonContainer{
+    padding: 8px;
+    padding-top: 0;
+  }
+  .signpost .buttonContainer:nth-child(1){
+    padding-top: 8px;
+  }
+  .dropdownButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 @media only screen and (max-width: 800px){
   .bannerText{
-    font-size: 30px;
-  }
-  .bannerText{
-    margin-right: 0;
+    font-size: 35px;
   }
   .bannerText:nth-child(1){
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 }
 @media only screen and (max-width: 550px){
   .bannerText{
-    font-size: 20px;
+    font-size: 26px;
+  }
+  .bannerText:nth-child(1){
+    margin-bottom: 0;
   }
   .banner .clickable{
     height: 24px;
     width: 102px;
-    border: 3px solid rgba(255, 255, 255, .5);
-    border-radius: 5px;
+    border-width: 3px;
   }
   .bannerButtonText{
     font-size: 15px;
   }
+  .banner .clickable img{
+    height: 15px;
+  }
   .projects, .resume, .about_me, .contact{
     width: 90%;
+  }
+  .signpostContainer{
+    height: 44px;
+  }
+  .signpost{
+    top: 44px;
+    border-top-width: 2px;
+  }
+  .signpostButtonText{
+    font-size: 16px;
+  }
+  .signpost .clickable{
+    height: 28px;
+    width: 140px;
+    border-width: 3px;
+  }
+  .signpost img{
+    height: 20px;
+  }
+  .signpost .buttonContainer{
+    padding: 5px;
+    padding-top: 0;
+  }
+  .signpost .buttonContainer:nth-child(1){
+    padding-top: 5px;
+  }
+  .dropdownButton{
+    height: 38px;
+    width: 38px;
+  }
+  .dropdownButton img{
+    height: 20px;
   }
 }
 @media only screen and (max-width: 420px){
   .bannerText{
-    font-size: 15px;
-  }
-  .bannerText{
-    margin-right: 0;
-  }
-  .bannerText:nth-child(1){
-    margin-bottom: 2px;
+    font-size: 18px;
   }
   .banner .clickable{
     height: 16px;
@@ -235,5 +316,8 @@ p{
   }
   .bannerButtonText{
     font-size: 10px;
+  }
+  .banner .clickable img{
+    height: 10px;
   }
 }

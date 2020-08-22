@@ -39,6 +39,8 @@ function localize(language){
 
 function loadSubpage(subpage){
   if (subpages.includes(subpage)){
+    //hide dropdown menu
+    document.querySelector(".signpost").style.display = "none";
     //hide the current subpage
     hideSubpage();
     //show the new subpage in the current language
@@ -55,6 +57,11 @@ function hideSubpage(){
   document.querySelector("[lang]:lang(" + currentLanguage + ")" + " ." + currentSubpage).style.display = "none";
   //remove activeButton class from current subpage button
   document.querySelector(".B-" + currentSubpage).classList.remove("currentButton");
+}
+
+function toggleDropdown(){
+  if(document.querySelector(".signpost").style.display === "none") document.querySelector(".signpost").style.display = "inline-flex";
+  else document.querySelector(".signpost").style.display = "none";
 }
 
 /*URL management*/
