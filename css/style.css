@@ -206,6 +206,11 @@ p{
 
 /*responsive styles*/
 
+@media only screen and (max-width: 1300px){
+  .projects, .resume, .about_me, .contact{
+    width: 75%;
+  }
+}
 @media only screen and (min-width: 1101px){
   /*force signpost display if the screen expands from dropdown style*/
   .signpost{
@@ -231,9 +236,6 @@ p{
   .banner .button:nth-child(1){
     display: block;
     margin-bottom: 4px;
-  }
-  .projects, .resume, .about_me, .contact{
-    width: 75%;
   }
   /*change signpost to dropdown*/
   .signpost{
@@ -266,7 +268,7 @@ p{
     margin-bottom: 2px;
   }
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 650px){ /*3/4 button size*/
   .bannerText{
     font-size: 26px;
   }
@@ -277,6 +279,7 @@ p{
     height: 24px;
     width: 102px;
     border-width: 3px;
+    border-radius: 5px;
   }
   .bannerButtonText{
     font-size: 15px;
@@ -288,7 +291,7 @@ p{
     width: 90%;
   }
 }
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 450px){ /*1/2 button size*/
   .bannerText{
     font-size: 18px;
   }
@@ -296,6 +299,7 @@ p{
     height: 16px;
     width: 68px;
     border-width: 2px;
+    border-radius: 3px;
   }
   .bannerButtonText{
     font-size: 10px;
@@ -308,7 +312,7 @@ p{
 /*styles for mobile landscape view*/
 
 /*make signpost smaller if it's in dropdown mode and height < 550px or if width < 550px*/
-@media only screen and (max-height: 550px) and (max-width: 1100px), only screen and (max-width: 550px){
+@media only screen and (max-height: 650px) and (max-width: 1100px), only screen and (max-width: 650px){ /*2/3 button size*/
   .signpostContainer{
     height: 44px;
   }
@@ -326,6 +330,7 @@ p{
     height: 28px;
     width: 140px;
     border-width: 3px;
+    border-radius: 7px;
   }
   .signpost .buttonContainer{
     padding: 5px;

@@ -1,5 +1,6 @@
 let URLHashStructure = ["localization", "subpage"];
-let languages = ["en", "cz"];
+let languages = ["en", "cs"];
+let titles = ["Radim Říha Electronics", "Elektronika Radim Říha"];
 let subpages = ["projects", "resume", "about_me", "contact"];
 let currentSubpage = subpages[0];
 let currentLanguage = languages[0];
@@ -31,6 +32,8 @@ function localize(language){
     //show new language button
     document.querySelector(".B-" + language).classList.add("currentButton");
     currentLanguage = language;
+    //change title
+    document.title = titles[languages.indexOf(language)];
     loadSubpage(currentSubpage);
   }
 }
@@ -68,7 +71,9 @@ function initFromURL(){
   initialized = false;
   //startup localization
   let localizationParameter = getURLHashParameter(URLHashStructure.indexOf("localization"));
+  let navLang = navigator.language.substring(0, 2);
   if(languages.indexOf(localizationParameter) != -1) localize(localizationParameter);
+  else if(languages.indexOf(navLang) != -1) localize(navLang);
   else localize(languages[0]);
   //startup subpage load
   let subpageParameter = getURLHashParameter(URLHashStructure.indexOf("subpage"));
